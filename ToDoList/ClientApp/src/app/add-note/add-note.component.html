@@ -1,0 +1,58 @@
+
+<form style="margin-left:20%;margin-right:20%;margin-top:5%" *ngIf="displayMode=='view'  || displayMode=='error' " #f='ngForm'>
+
+  <div *ngIf="displayMode=='error'" class="alert alert-danger">
+    Error In {{noteId == undefinde ? 'Add' : 'Edit'}} Note
+  </div>
+
+  <div class="form-group row">
+    <label for="note" class="col-sm-3 col-form-label">Note *</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Note" name="note" #note="ngModel"
+             [(ngModel)]="form.note" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="date" class="col-sm-3 col-form-label">Date *</label>
+    <div class="col-sm-10">
+      <input type="datetime-local" class="form-control" placeholder="Date" name="date" #date="ngModel"
+             [(ngModel)]="form.noteTime" required (change)="checkDate()">
+    </div>
+    <span *ngIf="dateError" style="color:red">
+      {{dateError}}
+    </span>
+  </div>
+  <div class="form-group row">
+    <label for="idCard" class="col-sm-5 col-form-label">Uplodad Image *</label>
+    <div class="col-sm-10">
+      <button class="btn btn-primary" *ngIf="!form.fileName" (click)="image.click()">Upload</button>
+      <button class="btn btn-primary" *ngIf="form.fileName" (click)="delete(form.fileId)">Delete</button>
+      <p class="file-name">
+        {{form.fileName}}
+      </p>
+      <input #image type="file" hidden (change)="upload(image.files)" required accept=".jpg,.png,.jpeg" />
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-8">
+      <button style="margin-left: 60%;" type="button" class="btn btn-primary" (click)="save()"
+              [disabled]="f.invalid || !form.fileName || dateErrorExist">
+        Save
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<div class="spinner-border spinner" role="status" *ngIf="displayMode=='loading'">
+  <span class="sr-only">Loading...</span>
+</div>
+
+
+<div *ngIf="displayMode=='succeed'">
+  <span>Succeed</span>
+</div>

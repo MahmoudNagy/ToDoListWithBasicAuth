@@ -1,0 +1,46 @@
+
+<div *ngIf="displayMode=='view'">
+  <div *ngFor="let note of notes">
+    <span *ngIf="note.isTimeOver" style="color:red">
+      Note {{note.note}} is time out.
+    </span>
+  </div>
+  <h1 class="center hed-list">All Notes</h1>
+  <button class="btn btn-primary add-btn" (click)="add()">New</button>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-dark">
+        <th style="text-align:center" scope="col">Image</th>
+        <th style="text-align:center" scope="col">Name</th>
+        <th style="text-align:center" scope="col">Time</th>
+        <th style="text-align:center" scope="col">Edit</th>
+        <th style="text-align:center" scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes">
+        <td>
+          <a href="/Upload/{{note.fileId}}/{{note.fileName}}">
+            <img src="/Upload/{{note.fileId}}/{{note.fileName}}"
+                 width="82" height="86" title="{{note.fileName}}" alt="{{note.fileName}}">
+          </a>
+        </td>
+        <td>{{note.note}}</td>
+        <td>{{note.noteTime |  date:'short' }}</td>
+        <td><button class="btn btn-primary" (click)="edit(note)">Edit</button></td>
+        <td><button class="btn btn-primary" (click)="delete(note)">Delete</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="spinner-border spinner" role="status" *ngIf="displayMode=='loading'">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="displayMode=='error'">
+  <span>Error</span>
+</div>

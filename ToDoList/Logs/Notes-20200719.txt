@@ -1,0 +1,6 @@
+2020-07-19 23:52:31.616 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-19 23:52:32.318 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-19 23:54:44.382 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-19 23:54:44.502 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-19 23:58:42.543 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-19 23:58:42.706 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer

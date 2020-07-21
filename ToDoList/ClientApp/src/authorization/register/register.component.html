@@ -1,0 +1,42 @@
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">To Do List</h4>
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Email</label>
+          <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Email is required</div>
+            <div *ngIf="f.username.errors.email">Email is must be in correct pattern </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password is minimum length is 8</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+          <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+            <div *ngIf="f.confirmPassword.errors.required">Password is required</div>
+            <div *ngIf="f.confirmPassword.errors.minlength">Confirm Password is minimum length is 8</div>
+          </div>
+          <div *ngIf="submitted && !(f.password.value == f.confirmPassword.value)" class="invalid-feedback">
+            Confirm Password doesn`t match password
+          </div>
+
+        </div>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Register
+        </button>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error | json}}</div>
+      </form>
+    </div>
+  </div>
+</div>

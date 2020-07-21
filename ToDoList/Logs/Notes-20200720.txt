@@ -1,0 +1,880 @@
+2020-07-20 00:04:38.878 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 00:04:39.305 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 00:06:20.776 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:06:21.028 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:06:21.118 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 00:06:21.127 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "ToDoListAPI openid profile", State: "8941a7cf76d8442d8a098709791aaaf1", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "ToDoListAPI openid profile"), ("state": "8941a7cf76d8442d8a098709791aaaf1"), ("code_challenge": "MVI_qVAG8hMPBa5ifIRZKRg4PZznmOFgaYsVGyRkV_U"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 00:06:21.152 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "ToDoListAPI openid profile", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000021-0002-f500-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:06:21, ProcessId: 13672, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:06:26.172 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:06:26.233 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:06:26.236 +02:00 [Information] Showing login: User is not authenticated
+2020-07-20 00:08:39.640 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2020-07-20 00:08:40.231 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****KAV4" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000015-0002-f600-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:08:40, ProcessId: 13672, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:08:45.077 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:08:45.105 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:08:45.169 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "80000013-0000-ff00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:08:45, ProcessId: 13672, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:08:45.565 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "g8xWyi_oLsI8X4skT7HN_4r0J_iRHisr4Ujc1zvKAV4", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "g8xWyi_oLsI8X4skT7HN_4r0J_iRHisr4Ujc1zvKAV4"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "dfc0ff633dec4213b50d9c00e4ab805512fc8e4e745643e9ab19ccdba8e29a2fb0405ab39cde4af39b18cf799f78d27c"), ("grant_type": "authorization_code")] }
+2020-07-20 00:08:45.887 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****vRNA" }, Token { TokenType: "access_token", TokenValue: "****euqg" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000013-0000-ff00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:08:45, ProcessId: 13672, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:08:45.961 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:08:45.985 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:08:46.037 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:08:46.187 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:09:27.930 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:27.973 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:27.980 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:28.029 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:09:28.065 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:09:28.083 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:09:28.108 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:09:41.312 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:41.345 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:41.352 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:09:41.391 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:09:41.405 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:09:41.424 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:09:41.453 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:11:03.554 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 00:11:03.873 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 00:11:30.837 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:11:31.102 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:11:31.913 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****ZZUU" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000016-0001-f400-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:11:31, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:11:36.503 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:11:36.511 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:11:36.534 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "8000000f-0003-fe00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:11:36, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:11:36.650 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "andDB17VFDBNh2X2sABPpNyAHB4gYGzKU1nIUIlZZUU", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "andDB17VFDBNh2X2sABPpNyAHB4gYGzKU1nIUIlZZUU"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "d4bebde5a5514b13a51572261788a2fde4c6503fa42d4834a2a507d5eea9bc1ba9e24dac566a4395afcd2b6018a922ee"), ("grant_type": "authorization_code")] }
+2020-07-20 00:11:36.807 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****ge9Q" }, Token { TokenType: "access_token", TokenValue: "****UjiQ" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000000f-0003-fe00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:11:36, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:11:36.854 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:11:36.879 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:11:36.891 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:11:36.997 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:12:28.718 +02:00 [Information] Invoking IdentityServer endpoint: "Microsoft.AspNetCore.ApiAuthorization.IdentityServer.AutoRedirectEndSessionEndpoint" for "/connect/endsession"
+2020-07-20 00:12:28.802 +02:00 [Information] End session request validation success
+EndSessionRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", PostLogOutUri: "https://localhost:44337/authentication/logout-callback", State: "758e54ebbf404759a3f7463755e6ccd6", Raw: [("id_token_hint": "***REDACTED***"), ("post_logout_redirect_uri": "https://localhost:44337/authentication/logout-callback"), ("state": "758e54ebbf404759a3f7463755e6ccd6")] }
+2020-07-20 00:12:38.240 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:12:38.306 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:12:38.308 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 00:12:38.313 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "ToDoListAPI openid profile", State: "a11f2cebd52a4791aab190fdcf4ec285", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "ToDoListAPI openid profile"), ("state": "a11f2cebd52a4791aab190fdcf4ec285"), ("code_challenge": "453yTH7A9EzGB1qrQvmttjABgKu6MSjVQI5tVOimyUY"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 00:12:38.315 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "ToDoListAPI openid profile", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000030-0000-fa00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:12:38, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:12:43.141 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:12:43.206 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:12:43.207 +02:00 [Information] Showing login: User is not authenticated
+2020-07-20 00:13:29.901 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:13:29.957 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:13:29.981 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****0nM0" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000001c-0000-fb00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:13:29, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:13:34.472 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:13:34.483 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:13:34.485 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "80000030-0001-f700-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:13:34, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:13:34.496 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "klbHvLdze2IJbb1lCPYauL-pNVNDfw95O3oz4Ni0nM0", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "klbHvLdze2IJbb1lCPYauL-pNVNDfw95O3oz4Ni0nM0"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "cbf6435ba87b4507af45815f8f35f5989cd90defb0a74b22bc875e021e9b9332238db8a3e55140dda232e4eb9c597a40"), ("grant_type": "authorization_code")] }
+2020-07-20 00:13:34.502 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****E2_Q" }, Token { TokenType: "access_token", TokenValue: "****lhlA" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000030-0001-f700-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:13:34, ProcessId: 14392, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:13:34.510 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:13:34.515 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:13:34.524 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:13:34.553 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:13:45.050 +02:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ToDoList.Services.Services.Interface.INotesService' while attempting to activate 'ToDoList.Controllers.NotesApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events)
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 00:15:06.536 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 00:15:06.944 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 00:16:05.718 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:16:06.173 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:16:07.575 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****UZHI" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000002a-0000-fe00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:16:07, ProcessId: 11180, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:16:12.263 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:16:12.277 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:16:12.317 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "8000002d-0002-f500-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:16:12, ProcessId: 11180, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:16:12.467 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "uq5BfOOK-bHu6qsPTfnOTVdjRTCIIvVHJosmZoNUZHI", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "uq5BfOOK-bHu6qsPTfnOTVdjRTCIIvVHJosmZoNUZHI"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "8f20383619d84a6fa149dc6726c96b0abffaa0069e1746c8bd584dbdb570118320d765078e464f06b5f6b741e5e7d67e"), ("grant_type": "authorization_code")] }
+2020-07-20 00:16:12.724 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****wevQ" }, Token { TokenType: "access_token", TokenValue: "****KZxQ" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000002d-0002-f500-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:16:12, ProcessId: 11180, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:16:12.774 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:16:12.798 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:16:12.813 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:04.070 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:04.131 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:04.132 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:04.142 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:04.249 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:04.301 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:40.930 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:40.963 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:40.972 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:19:41.015 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:41.037 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:19:41.062 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:21:22.948 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 00:21:23.439 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 00:22:09.201 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:22:09.284 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:22:09.946 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****6Ou0" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000034-0000-fb00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:22:09, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:22:14.419 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:22:14.443 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:22:14.455 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "80000027-0000-ff00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:22:14, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:22:14.511 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "ZkZCMa8Qzx5O21AAOl6wfGu3K-G0C5yk84vXuFk6Ou0", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "ZkZCMa8Qzx5O21AAOl6wfGu3K-G0C5yk84vXuFk6Ou0"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "b678860b1d704ebaa775dff053520c00d7cec2d9a4ec4ca1985b057807ceca69e1b9264b5ed14a4a8cadb0f874541e90"), ("grant_type": "authorization_code")] }
+2020-07-20 00:22:14.610 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****ertA" }, Token { TokenType: "access_token", TokenValue: "****5zfg" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000027-0000-ff00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:22:14, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:22:14.654 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:22:14.681 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:22:14.693 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:22:34.826 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:22:34.870 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:22:34.875 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:22:34.955 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:22:34.967 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:22:34.976 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:26.114 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:24:26.158 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:24:26.163 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:24:26.219 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:26.230 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:26.258 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:32.124 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:32.154 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:32.185 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:24:33.650 +02:00 [Information] Invoking IdentityServer endpoint: "Microsoft.AspNetCore.ApiAuthorization.IdentityServer.AutoRedirectEndSessionEndpoint" for "/connect/endsession"
+2020-07-20 00:24:33.689 +02:00 [Information] End session request validation success
+EndSessionRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", SubjectId: "04f9ab28-ba5d-4318-9b74-6d243903760e", PostLogOutUri: "https://localhost:44337/authentication/logout-callback", State: "b1159799da024969bb4f775fe675ef8d", Raw: [("id_token_hint": "***REDACTED***"), ("post_logout_redirect_uri": "https://localhost:44337/authentication/logout-callback"), ("state": "b1159799da024969bb4f775fe675ef8d")] }
+2020-07-20 00:24:34.412 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:24:34.414 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 00:24:34.417 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "openid", State: "524b73516f1d4c89b4a94c805546a522", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "openid"), ("state": "524b73516f1d4c89b4a94c805546a522"), ("code_challenge": "CxGk5NEQrwoPs0IbDkinEKL5Fy0zH12_JV3yh9StAAE"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 00:24:34.418 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "openid", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000002a-0003-fa00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:24:34, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:24:34.613 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:24:34.614 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 00:24:34.615 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "openid", State: "c75c894608814e48bae438069442e776", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "openid"), ("state": "c75c894608814e48bae438069442e776"), ("code_challenge": "pSnTt265SKNBkdZPVgGww-mxpu0nTwuj41sTFgtpCSo"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 00:24:34.615 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "openid", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000027-0000-fc00-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:24:34, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:24:47.472 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:24:47.506 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:24:47.507 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 00:24:47.507 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "ToDoListAPI openid profile", State: "b7756bb4500b40029dec531e3772a3e7", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "ToDoListAPI openid profile"), ("state": "b7756bb4500b40029dec531e3772a3e7"), ("code_challenge": "uON61U-9rOFbydbVb1HhDH_k9IiUZ1FSsg65sQGf-ow"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 00:24:47.508 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "ToDoListAPI openid profile", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000050-0002-f400-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:24:47, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:24:51.911 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:24:51.933 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:24:51.934 +02:00 [Information] Showing login: User is not authenticated
+2020-07-20 00:26:30.217 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:26:30.272 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 00:26:30.295 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "5ccf29d1-8414-4829-9b1a-b06eba6257b6", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****iTDY" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000020-0001-f300-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:26:30, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:26:34.692 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:26:34.704 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 00:26:34.705 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "80000029-0002-f300-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:26:34, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:26:34.719 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "lY-oOz4TEdfbPpP4XD6OKWQvBFozO373u1b6vbriTDY", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "lY-oOz4TEdfbPpP4XD6OKWQvBFozO373u1b6vbriTDY"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "2c8aeaadc7374e8886da6d353cdc5e93d305a3dcc29f4f318a72e4e9573f297a34be4e0e94b6466dbc8a7e57e8282573"), ("grant_type": "authorization_code")] }
+2020-07-20 00:26:34.725 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "5ccf29d1-8414-4829-9b1a-b06eba6257b6", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****F3XQ" }, Token { TokenType: "access_token", TokenValue: "****4KHg" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000029-0002-f300-b63f-84710c7967bb", TimeStamp: 07/19/2020 22:26:34, ProcessId: 16836, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 00:26:34.736 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 00:26:34.745 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 00:26:34.755 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:26:55.218 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:26:55.259 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:26:55.263 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 00:26:55.310 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:26:55.318 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 00:26:55.330 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 09:01:57.373 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 09:01:58.422 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 09:03:43.149 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 09:03:43.379 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 09:03:44.368 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: "5ccf29d1-8414-4829-9b1a-b06eba6257b6", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "code", TokenValue: "****cbvg" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000040-0003-fb00-b63f-84710c7967bb", TimeStamp: 07/20/2020 07:03:44, ProcessId: 9248, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 09:03:49.035 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 09:03:49.054 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2020-07-20 09:03:49.093 +02:00 [Information] ClientAuthenticationSuccessEvent { ClientId: "ToDoList", AuthenticationMethod: "NoSecret", Category: "Authentication", Name: "Client Authentication Success", EventType: Success, Id: 1010, Message: null, ActivityId: "80000031-0002-f900-b63f-84710c7967bb", TimeStamp: 07/20/2020 07:03:49, ProcessId: 9248, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 09:03:49.223 +02:00 [Information] Token request validation success, TokenRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", GrantType: "authorization_code", Scopes: null, AuthorizationCode: "yYtkobJ3aks28htngFU1K6qj0PJkLAh4OsT63RQcbvg", RefreshToken: null, UserName: null, AuthenticationContextReferenceClasses: null, Tenant: null, IdP: null, Raw: [("client_id": "ToDoList"), ("code": "yYtkobJ3aks28htngFU1K6qj0PJkLAh4OsT63RQcbvg"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("code_verifier": "6edde03711af4bdd88fb6d16431b5d31840bb903732e4987808eda88a1b192ac50c345e453394108b61fd7c7bd430d28"), ("grant_type": "authorization_code")] }
+2020-07-20 09:03:49.718 +02:00 [Information] TokenIssuedSuccessEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: null, Endpoint: "Token", SubjectId: "5ccf29d1-8414-4829-9b1a-b06eba6257b6", Scopes: "openid profile ToDoListAPI", GrantType: "authorization_code", Tokens: [Token { TokenType: "id_token", TokenValue: "****3qVg" }, Token { TokenType: "access_token", TokenValue: "****py5A" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000031-0002-f900-b63f-84710c7967bb", TimeStamp: 07/20/2020 07:03:49, ProcessId: 9248, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 09:03:49.779 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-07-20 09:03:49.803 +02:00 [Information] Profile service returned the following claim types: "sub preferred_username name"
+2020-07-20 09:03:49.850 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-07-20 09:03:58.080 +02:00 [Information] Invoking IdentityServer endpoint: "Microsoft.AspNetCore.ApiAuthorization.IdentityServer.AutoRedirectEndSessionEndpoint" for "/connect/endsession"
+2020-07-20 09:03:58.106 +02:00 [Information] End session request validation success
+EndSessionRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", SubjectId: "5ccf29d1-8414-4829-9b1a-b06eba6257b6", PostLogOutUri: "https://localhost:44337/authentication/logout-callback", State: "0523dfe65ae54118ac04b54a329d5731", Raw: [("id_token_hint": "***REDACTED***"), ("post_logout_redirect_uri": "https://localhost:44337/authentication/logout-callback"), ("state": "0523dfe65ae54118ac04b54a329d5731")] }
+2020-07-20 09:04:04.249 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 09:04:04.298 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 09:04:04.300 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 09:04:04.303 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "ToDoListAPI openid profile", State: "64c06de2dffb491e903abf43f9dc5ef2", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "ToDoListAPI openid profile"), ("state": "64c06de2dffb491e903abf43f9dc5ef2"), ("code_challenge": "I0x6kXyqG1PuaETSYNkHDCp1sUn8XpzSSj_cPKpDoV4"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 09:04:04.305 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "ToDoListAPI openid profile", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000021-0003-fe00-b63f-84710c7967bb", TimeStamp: 07/20/2020 07:04:04, ProcessId: 9248, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 09:04:08.835 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 09:04:08.898 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 09:04:08.899 +02:00 [Information] Showing login: User is not authenticated
+2020-07-20 09:21:26.413 +02:00 [Information] Starting IdentityServer4 version "3.0.0.0"
+2020-07-20 09:21:26.718 +02:00 [Information] Using explicitly configured authentication scheme "Identity.Application" for IdentityServer
+2020-07-20 09:22:12.468 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-07-20 09:22:12.813 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 09:22:12.904 +02:00 [Information] Showing error: prompt=none was requested but user is not authenticated
+2020-07-20 09:22:12.916 +02:00 [Information] AuthorizeRequestValidationLog { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", AllowedRedirectUris: ["/authentication/login-callback"], SubjectId: "anonymous", ResponseType: "code", ResponseMode: "query", GrantType: "authorization_code", RequestedScopes: "ToDoListAPI openid profile", State: "38773447c6bb41c4ae772ce70663d1bf", UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: "none", MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "ToDoList"), ("redirect_uri": "https://localhost:44337/authentication/login-callback"), ("response_type": "code"), ("scope": "ToDoListAPI openid profile"), ("state": "38773447c6bb41c4ae772ce70663d1bf"), ("code_challenge": "rHbwwF9VheQBWR66_DKbfk9YZe28ESww1O3a5J-27YA"), ("code_challenge_method": "S256"), ("prompt": "none"), ("response_mode": "query")] }
+2020-07-20 09:22:12.925 +02:00 [Information] TokenIssuedFailureEvent { ClientId: "ToDoList", ClientName: "ToDoList", RedirectUri: "https://localhost:44337/authentication/login-callback", Endpoint: "Authorize", SubjectId: null, Scopes: "ToDoListAPI openid profile", GrantType: "authorization_code", Error: "login_required", ErrorDescription: null, Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000010-0002-f200-b63f-84710c7967bb", TimeStamp: 07/20/2020 07:22:12, ProcessId: 19696, LocalIpAddress: "::1:44337", RemoteIpAddress: "::1" }
+2020-07-20 09:22:18.014 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-07-20 09:22:18.015 +02:00 [Information] Showing login: User is not authenticated
+2020-07-20 12:46:51.239 +02:00 [Error] ERROR in api-authorization/authorize.guard.ts:6:55 - error TS2307: Cannot find module './api-authorization.constants'.
+
+6 import { ApplicationPaths, QueryParameterNames } from './api-authorization.constants';
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+api-authorization/authorize.service.ts:5:51 - error TS2307: Cannot find module './api-authorization.constants'.
+
+5 import { ApplicationPaths, ApplicationName } from './api-authorization.constants';
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+api-authorization/login-menu/login-menu.component.ts:26:10 - error TS2339: Property 'authenticationService' does not exist on type 'LoginMenuComponent'.
+
+26     this.authenticationService.logout();
+            ~~~~~~~~~~~~~~~~~~~~~
+api-authorization/login-menu/login-menu.component.ts:27:10 - error TS2339: Property 'router' does not exist on type 'LoginMenuComponent'.
+
+27     this.router.navigate(['/login']);
+            ~~~~~~
+api-authorization/login/login.component.ts:2:28 - error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+
+2 import { AuthorizeService, AuthenticationResultStatus } from '../authorize.service';
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~
+api-authorization/login/login.component.ts:5:84 - error TS2307: Cannot find module '../api-authorization.constants'.
+
+5 import { LoginActions, QueryParameterNames, ApplicationPaths, ReturnUrlType } from '../api-authorization.constants';
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2020-07-20 12:53:56.286 +02:00 [Error] api-authorization/login/login.component.ts:70:3 - error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+
+70   [ReturnUrlType]: string;
+     ~~~~~~~~~~~~~~~
+api-authorization/logout/logout.component.ts:2:10 - error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+
+2 import { AuthenticationResultStatus, AuthorizeService } from '../authorize.service';
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+api-authorization/logout/logout.component.ts:6:64 - error TS2307: Cannot find module '../api-authorization.constants'.
+
+6 import { LogoutActions, ApplicationPaths, ReturnUrlType } from '../api-authorization.constants';
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+api-authorization/logout/logout.component.ts:49:57 - error TS2339: Property 'isAuthenticated' does not exist on type 'AuthorizeService'.
+
+49     const isauthenticated = await this.authorizeService.isAuthenticated().pipe(
+                                                           ~~~~~~~~~~~~~~~
+api-authorization/logout/logout.component.ts:53:50 - error TS2339: Property 'signOut' does not exist on type 'AuthorizeService'.
+
+53       const result = await this.authorizeService.signOut(state);
+                                                    ~~~~~~~
+api-authorization/logout/logout.component.ts:73:48 - error TS2339: Property 'completeSignOut' does not exist on type 'AuthorizeService'.
+
+73     const result = await this.authorizeService.completeSignOut(url);
+                                                  ~~~~~~~~~~~~~~~
+api-authorization/logout/logout.component.ts:97:86 - error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+
+97     const fromQuery = (this.activatedRoute.snapshot.queryParams as INavigationState).returnUrl;
+                                                                                        ~~~~~~~~~
+api-authorization/logout/logout.component.ts:106:28 - error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+
+106     return (state && state.returnUrl) ||
+                               ~~~~~~~~~
+api-authorization/logout/logout.component.ts:113:3 - error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+
+113   [ReturnUrlType]: string;
+      ~~~~~~~~~~~~~~~
+app/app.module.ts:12:40 - error TS2307: Cannot find module 'src/api-authorization/api-authorization.module'.
+
+12 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+2020-07-20 12:53:56.288 +02:00 [Error] ERROR in ./src/api-authorization/login/login.component.ts
+Module not found: Error: Can't resolve '../api-authorization.constants' in 'D:\ToDoList\ToDoList\ClientApp\src\api-authorization\login'
+ERROR in ./src/api-authorization/authorize.guard.ts
+Module not found: Error: Can't resolve './api-authorization.constants' in 'D:\ToDoList\ToDoList\ClientApp\src\api-authorization'
+
+2020-07-20 12:53:56.731 +02:00 [Error]     ERROR in src/api-authorization/authorize.guard.ts(6,55): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/authorize.service.ts(5,51): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/login-menu/login-menu.component.ts(26,10): error TS2339: Property 'authenticationService' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/login-menu/login-menu.component.ts(27,10): error TS2339: Property 'router' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/login/login.component.ts(2,28): error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+    src/api-authorization/login/login.component.ts(5,84): error TS2307: Cannot find module '../api-authorization.constants'.
+    src/api-authorization/login/login.component.ts(70,3): error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+    src/api-authorization/logout/logout.component.ts(2,10): error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+    src/api-authorization/logout/logout.component.ts(6,64): error TS2307: Cannot find module '../api-authorization.constants'.
+    src/api-authorization/logout/logout.component.ts(49,57): error TS2339: Property 'isAuthenticated' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(53,50): error TS2339: Property 'signOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(73,48): error TS2339: Property 'completeSignOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(97,86): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+
+2020-07-20 12:54:55.149 +02:00 [Error]     src/api-authorization/logout/logout.component.ts(106,28): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+    src/api-authorization/logout/logout.component.ts(113,3): error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+    
+
+
+2020-07-20 12:54:55.151 +02:00 [Error] ERROR in ./src/api-authorization/authorize.guard.ts
+Module not found: Error: Can't resolve './api-authorization.constants' in 'D:\ToDoList\ToDoList\ClientApp\src\api-authorization'
+
+2020-07-20 12:54:56.718 +02:00 [Error]     ERROR in src/api-authorization/authorize.guard.ts(6,55): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/authorize.service.ts(5,51): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/login-menu/login-menu.component.ts(26,10): error TS2339: Property 'authenticationService' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/login-menu/login-menu.component.ts(27,10): error TS2339: Property 'router' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/login/login.component.ts(69,3): error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+    src/api-authorization/login/login.component.ts(69,4): error TS2304: Cannot find name 'ReturnUrlType'.
+    src/api-authorization/logout/logout.component.ts(2,10): error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+    src/api-authorization/logout/logout.component.ts(6,64): error TS2307: Cannot find module '../api-authorization.constants'.
+    src/api-authorization/logout/logout.component.ts(49,57): error TS2339: Property 'isAuthenticated' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(53,50): error TS2339: Property 'signOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(73,48): error TS2339: Property 'completeSignOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(97,86): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+    src/api-authorization/logout/logout.component.ts(106,28): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+    src/api-authorization/logout/logout.component.ts(113,3): error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+
+2020-07-20 12:55:00.309 +02:00 [Error] ERROR in ./src/api-authorization/authorize.guard.ts
+Module not found: Error: Can't resolve './api-authorization.constants' in 'D:\ToDoList\ToDoList\ClientApp\src\api-authorization'
+
+2020-07-20 12:55:00.668 +02:00 [Error]     ERROR in src/api-authorization/authorize.guard.ts(6,55): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/authorize.service.ts(5,51): error TS2307: Cannot find module './api-authorization.constants'.
+    src/api-authorization/login-menu/login-menu.component.ts(26,10): error TS2339: Property 'authenticationService' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/login-menu/login-menu.component.ts(27,10): error TS2339: Property 'router' does not exist on type 'LoginMenuComponent'.
+    src/api-authorization/logout/logout.component.ts(2,10): error TS2305: Module '"D:/ToDoList/ToDoList/ClientApp/src/api-authorization/authorize.service"' has no exported member 'AuthenticationResultStatus'.
+    src/api-authorization/logout/logout.component.ts(6,64): error TS2307: Cannot find module '../api-authorization.constants'.
+    src/api-authorization/logout/logout.component.ts(49,57): error TS2339: Property 'isAuthenticated' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(53,50): error TS2339: Property 'signOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(73,48): error TS2339: Property 'completeSignOut' does not exist on type 'AuthorizeService'.
+    src/api-authorization/logout/logout.component.ts(97,86): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+    src/api-authorization/logout/logout.component.ts(106,28): error TS2339: Property 'returnUrl' does not exist on type 'INavigationState'.
+    src/api-authorization/logout/logout.component.ts(113,3): error TS1169: A computed property name in an interface must refer to an expression whose type is a literal type or a 'unique symbol' type.
+    
+
+2020-07-20 13:05:56.957 +02:00 [Error]     ERROR in src/app/app.module.ts(3,10): error TS2300: Duplicate identifier 'FormsModule'.
+    src/app/app.module.ts(17,10): error TS2300: Duplicate identifier 'FormsModule'.
+    
+
+2020-07-20 13:09:05.859 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 13:10:00.976 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 13:13:36.621 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 13:16:46.711 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 13:19:34.925 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 13:20:15.954 +02:00 [Error]     ERROR in src/app/nav-menu/nav-menu.component.ts(23,42): error TS2551: Property 'userName' does not exist on type 'User'. Did you mean 'username'?
+    
+
+2020-07-20 13:20:27.498 +02:00 [Error]     ERROR in src/app/nav-menu/nav-menu.component.ts(35,40): error TS2551: Property 'username' does not exist on type 'User'. Did you mean 'userName'?
+    
+
+2020-07-20 13:42:30.332 +02:00 [Error] ERROR in authorization/register/register.component.ts:44:39 - error TS1109: Expression expected.
+
+44       frm.controls['confirmpassword']?.value ? null : { 'mismatch': true };
+                                         ~
+authorization/register/register.component.ts:44:75 - error TS1005: ':' expected.
+
+44       frm.controls['confirmpassword']?.value ? null : { 'mismatch': true };
+                                                                             ~
+
+
+2020-07-20 14:16:24.037 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:17:01.784 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:20:45.623 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:22:18.601 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:22:54.139 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:23:10.577 +02:00 [Error] ERROR in authorization/register/register.component.ts:63:30 - error TS1109: Expression expected.
+
+63           this.error = error?.error?.message;
+                                ~
+authorization/register/register.component.ts:63:37 - error TS1109: Expression expected.
+
+63           this.error = error?.error?.message;
+                                       ~
+authorization/register/register.component.ts:63:45 - error TS1005: ':' expected.
+
+63           this.error = error?.error?.message;
+                                               ~
+
+
+2020-07-20 14:23:15.468 +02:00 [Error] ERROR in authorization/register/register.component.ts:62:30 - error TS1109: Expression expected.
+
+62           this.error = error?.error?.message;
+                                ~
+authorization/register/register.component.ts:62:37 - error TS1109: Expression expected.
+
+62           this.error = error?.error?.message;
+                                       ~
+authorization/register/register.component.ts:62:45 - error TS1005: ':' expected.
+
+62           this.error = error?.error?.message;
+                                               ~
+
+
+2020-07-20 14:23:37.437 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:24:50.364 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:28:39.656 +02:00 [Information] "BasicAuthentication" was not authenticated. Failure message: "Missing Authorization Header"
+2020-07-20 14:40:35.509 +02:00 [Error] ERROR in ../node_modules/ngx-toastr/portal/portal.d.ts:26:9 - error TS1086: An accessor cannot be declared in an ambient context.
+
+26     get isAttached(): boolean;
+           ~~~~~~~~~~
+../node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts:19:9 - error TS1086: An accessor cannot be declared in an ambient context.
+
+19     get displayStyle(): string;
+           ~~~~~~~~~~~~
+../node_modules/ngx-toastr/toastr/toast.component.d.ts:26:9 - error TS1086: An accessor cannot be declared in an ambient context.
+
+26     get displayStyle(): string | undefined;
+           ~~~~~~~~~~~~
+
+ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: Failed to find 'ngx-toastr/toastr-bs4-alert'
+  in [
+    D:\ToDoList\ToDoList\ClientApp\src
+  ]
+    at resolveModule.catch.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-import\lib\resolve-id.js:35:13)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at Promise.resolve.then.then.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-loader\src\index.js:208:9)
+
+2020-07-20 14:43:25.047 +02:00 [Error] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: Failed to find 'ngx-toastr/toastr-bs4-alert'
+  in [
+    D:\ToDoList\ToDoList\ClientApp\src
+  ]
+    at resolveModule.catch.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-import\lib\resolve-id.js:35:13)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at Promise.resolve.then.then.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-loader\src\index.js:208:9)
+
+2020-07-20 14:43:29.709 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:43:34.175 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:45:27.493 +02:00 [Error] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: Failed to find 'ngx-toastr/toastr-bs4-alert'
+  in [
+    D:\ToDoList\ToDoList\ClientApp\src
+  ]
+    at resolveModule.catch.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-import\lib\resolve-id.js:35:13)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at Promise.resolve.then.then.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-loader\src\index.js:208:9)
+
+2020-07-20 14:45:28.774 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:45:45.265 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:45:50.344 +02:00 [Error] ERROR in ./node_modules/ngx-toastr/toastr.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\ngx-toastr\toastr.css'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+
+2020-07-20 14:46:28.948 +02:00 [Error]     at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:203:19
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:46:13)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:169:2)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:365:2)
+    at NormalModule.doBuild (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:292:3)
+ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\ngx-toastr\toastr.css'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at Promise.resolve.then.then.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-loader\src\index.js:208:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ERROR in ./src/app/app.module.ts
+Module not found: Error: Can't resolve 'ngx-toastr' in 'D:\ToDoList\ToDoList\ClientApp\src\app'
+ERROR in ./src/app/notes/notes.component.ts
+Module not found: Error: Can't resolve 'ngx-toastr' in 'D:\ToDoList\ToDoList\ClientApp\src\app\notes'
+
+
+2020-07-20 14:46:28.949 +02:00 [Error] ERROR in ./node_modules/ngx-toastr/toastr.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\ngx-toastr\toastr.css'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+
+2020-07-20 14:46:28.950 +02:00 [Error]     at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:203:19
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:46:13)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:169:2)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:365:2)
+    at NormalModule.doBuild (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:292:3)
+ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\ngx-toastr\toastr.css'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:165:10)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:176:18
+    at loadLoader (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\loadLoader.js:47:3)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20)
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at Promise.resolve.then.then.catch (D:\ToDoList\ToDoList\ClientApp\node_modules\postcss-loader\src\index.js:208:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ERROR in ./node_modules/@angular/animations/fesm2015/animations.js
+Module build failed: Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\@angular\animations\fesm2015\animations.js'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+
+2020-07-20 14:46:28.966 +02:00 [Error]     at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:365:2)
+    at NormalModule.doBuild (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:292:3)
+    at NormalModule.build (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:438:15)
+ERROR in ./node_modules/@angular/animations/fesm2015/browser.js
+Module build failed: Error: ENOENT: no such file or directory, open 'D:\ToDoList\ToDoList\ClientApp\node_modules\@angular\animations\fesm2015\browser.js'
+    at Object.openSync (fs.js:438:3)
+    at Object.readFileSync (fs.js:343:35)
+    at Storage.provideSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:98:13)
+    at CachedInputFileSystem.readFileSync (D:\ToDoList\ToDoList\ClientApp\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:259:32)
+    at Observable.rxjs_1.Observable.obs [as _subscribe] (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\webpack-input-host.js:35:51)
+    at Observable._trySubscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:44:25)
+    at Observable.subscribe (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\node_modules\rxjs\internal\Observable.js:30:22)
+    at SyncDelegateHost._doSyncCall (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:22:20)
+    at SyncDelegateHost.read (D:\ToDoList\ToDoList\ClientApp\node_modules\@angular-devkit\core\src\virtual-fs\host\sync.js:49:21)
+    at WebpackCompilerHost.readFileBuffer (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\compiler_host.js:161:44)
+    at VirtualFileSystemDecorator.readFile (D:\ToDoList\ToDoList\ClientApp\node_modules\@ngtools\webpack\src\virtual_file_system_decorator.js:42:54)
+    at processResource (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:158:10)
+    at runLoaders (D:\ToDoList\ToDoList\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:365:2)
+    at NormalModule.doBuild (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:292:3)
+    at NormalModule.build (D:\ToDoList\ToDoList\ClientApp\node_modules\webpack\lib\NormalModule.js:438:15)
+ERROR in ./src/app/app.module.ts
+Module not found: Error: Can't resolve 'ngx-toastr' in 'D:\ToDoList\ToDoList\ClientApp\src\app'
+ERROR in ./src/app/notes/notes.component.ts
+Module not found: Error: Can't resolve 'ngx-toastr' in 'D:\ToDoList\ToDoList\ClientApp\src\app\notes'
+    
+
+2020-07-20 14:46:28.968 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:49:42.898 +02:00 [Error]     ERROR in node_modules/ngx-toastr/portal/portal.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast-noanimation.component.d.ts(19,9): error TS1086: An accessor cannot be declared in an ambient context.
+    node_modules/ngx-toastr/toastr/toast.component.d.ts(26,9): error TS1086: An accessor cannot be declared in an ambient context.
+    
+
+2020-07-20 14:51:20.549 +02:00 [Error] ERROR in app/notes/notes.component.ts:23:58 - error TS1005: ';' expected.
+
+23     this.showMessage("test", "", MessageSeverity.Default));
+                                                            ~
+
+
+2020-07-20 14:51:21.227 +02:00 [Error]     ERROR in src/app/notes/notes.component.ts(23,10): error TS2339: Property 'showMessage' does not exist on type 'NotesComponent'.
+    src/app/notes/notes.component.ts(23,34): error TS2304: Cannot find name 'MessageSeverity'.
+    
+
+2020-07-20 14:54:10.492 +02:00 [Error] ERROR in app/notes/notes.component.ts:25:58 - error TS1005: ';' expected.
+
+25     this.showMessage("test", "", MessageSeverity.Default));
+                                                            ~
+app/notes/notes.component.ts:75:3 - error TS1068: Unexpected token. A constructor, method, accessor, or property was expected.
+
+75   export class AlertMessage {
+     ~~~~~~
+app/notes/notes.component.ts:79:1 - error TS1128: Declaration or statement expected.
+
+79 }
+   ~
+
+
+2020-07-20 14:54:26.327 +02:00 [Error] ERROR in app/notes/notes.component.ts:25:58 - error TS1005: ';' expected.
+
+25     this.showMessage("test", "", MessageSeverity.Default));
+                                                            ~
+
+
+2020-07-20 15:01:03.058 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(14,16): error TS2351: Cannot use 'new' with an expression whose type lacks a call or construct signature.
+    src/app/add-note/add-note.component.ts(14,25): error TS2729: Property 'date' is used before its initialization.
+    
+
+2020-07-20 15:01:27.214 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(26,17): error TS2663: Cannot find name 'date'. Did you mean the instance member 'this.date'?
+    
+
+2020-07-20 15:11:18.565 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,36): error TS2663: Cannot find name 'hours'. Did you mean the instance member 'this.hours'?
+    
+
+2020-07-20 15:11:25.040 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,36): error TS2663: Cannot find name 'hours'. Did you mean the instance member 'this.hours'?
+    
+
+2020-07-20 15:11:37.873 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,36): error TS2663: Cannot find name 'hours'. Did you mean the instance member 'this.hours'?
+    
+
+2020-07-20 15:25:11.433 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,3): error TS2322: Type 'string' is not assignable to type 'Date'.
+    
+
+2020-07-20 15:27:07.178 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,3): error TS2740: Type '() => string' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+    
+
+2020-07-20 15:27:09.355 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(15,3): error TS2322: Type 'string' is not assignable to type 'Date'.
+    
+
+2020-07-20 15:29:25.517 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(28,54): error TS2339: Property 'toISOString' does not exist on type 'number'.
+    
+
+2020-07-20 15:29:53.104 +02:00 [Error] ERROR in app/add-note/add-note.component.ts:28:26 - error TS1135: Argument expression expected.
+
+28     console.log(new Date(.setHours(this.housrs + 2).toLocaleString()).toISOString());
+                            ~
+
+
+2020-07-20 15:29:53.858 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(28,27): error TS2304: Cannot find name 'setHours'.
+    
+
+2020-07-20 15:32:58.400 +02:00 [Error] ERROR in app/add-note/add-note.component.ts:28:17 - error TS1135: Argument expression expected.
+
+28     console.log(var isoDateTime = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString(););
+                   ~~~
+app/add-note/add-note.component.ts:28:111 - error TS1128: Declaration or statement expected.
+
+28     console.log(var isoDateTime = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString(););
+                                                                                                                 ~
+
+
+2020-07-20 15:32:59.280 +02:00 [Error]     ERROR in src/app/add-note/add-note.component.ts(28,44): error TS2552: Cannot find name 'date'. Did you mean 'Date'?
+    src/app/add-note/add-note.component.ts(28,62): error TS2552: Cannot find name 'date'. Did you mean 'Date'?
+    
+
+2020-07-20 15:36:11.888 +02:00 [Error] ERROR in app/add-note/add-note.component.ts:125:22 - error TS1005: ';' expected.
+
+125     this.dateError="":
+                         ~
+
+
